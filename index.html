@@ -17,7 +17,7 @@
             >
 
             <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Espetinho do Careca</h1>
-            <p class=" font-medium text-white">Rua profª Lourdes Dutra</p>
+            <p class="font-medium text-white">Rua profª Lourdes Dutra</p>
             <span class="font-medium text-white">O Melhor Espetinho de Rua da Zona Norte.</span>
 
             <div class="mt-4 mb-2" id="date-span">
@@ -30,16 +30,58 @@
         </div>
     </header>
 
-    <section id="section" class="flex items-center justify-center">
-        <h2 class="mt-4 mb-2 font-bold text-2xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu</h2>
+    <section id="menu" class="flex flex-col items-center justify-center my-8">
+        <h2 class="mt-4 mb-6 font-bold text-2xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu</h2>
         
-        <div id="category">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <div id="category" class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div class="text-center">
+                <a href="#espetinhos">
+                    <img 
+                        src="assets/carne_sol_queijo.jpg" 
+                        alt="Espetinhos" 
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
+                    >
+                </a>
+                <h3 class="mt-2 font-medium text-amber-900">Espetinhos</h3>
+            </div>
+            <div class="text-center">
+                <a href="#entradas">
+                    <img 
+                        src="assets/Entradas.jpg" 
+                        alt="Entradas" 
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
+                    >
+                </a>
+                <h3 class="mt-2 font-medium text-amber-900">Entradas</h3>
+            </div>
+            <div class="text-center">
+                <a href="#bebidas">
+                    <img 
+                        src="assets/bebidas.jpg" 
+                        alt="Bebidas" 
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
+                    >
+                </a>
+                <h3 class="mt-2 font-medium text-amber-900">Bebidas</h3>
+            </div>
         </div>
     </section>
+
+    <!-- Seções das categorias -->
+    <section id="espetinhos" class="my-8">
+        <h2 class="text-3xl font-bold text-amber-900">Espetinhos</h2>
+        <!-- Conteúdo da seção Espetinhos -->
+    </section>
+
+    <section id="entradas" class="my-8">
+        <h2 class="text-3xl font-bold text-amber-900">Entradas</h2>
+        <!-- Conteúdo da seção Entradas -->
+    </section>
+
+    <section id="bebidas" class="my-8">
+        <h2 class="text-3xl font-bold text-amber-900">Bebidas</h2>
+        <!-- Conteúdo da seção Bebidas -->
+    </section>
+
 </body>
 </html>
