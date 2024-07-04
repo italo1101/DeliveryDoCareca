@@ -1,87 +1,442 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/output.css">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <title>Espetinho do Careca</title>
 </head>
+
 <body>
     <header class="w-full h-[420px] bg-zinc-800 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
-            <img 
-                src="assets/espetinho_careca_logo.jpg"
-                alt="logo"
-                class="w-32 h-32 rounded-md shadow-lg hover:scale-110 duration-200"
-            >
-
+            <img src="assets/espetinho_careca_logo.jpg" alt="logo"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
             <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Espetinho do Careca</h1>
             <p class="font-medium text-white">Rua profª Lourdes Dutra</p>
             <span class="font-medium text-white">O Melhor Espetinho de Rua da Zona Norte.</span>
-
             <div class="mt-4 mb-2" id="date-span">
-                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Presencial - Qui à Sab - à partir das 19:00</span>
+                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Presencial - Qui à Sab - à partir
+                    das 19:00</span>
             </div>
-            
             <div class="mt-4 mb-2">
-                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Delivery - Seg - Qua - 19:00 às 00:00</span>
+                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Delivery - Seg - Qua - 19:00 às
+                    00:00</span>
             </div>
         </div>
     </header>
 
-    <section id="menu" class="flex flex-col items-center justify-center my-8">
-        <h2 class="mt-4 mb-6 font-bold text-2xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu</h2>
-        
-        <div id="category" class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-            <div class="text-center">
-                <a href="#espetinhos">
-                    <img 
-                        src="assets/carne_sol_queijo.jpg" 
-                        alt="Espetinhos" 
-                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
-                    >
-                </a>
-                <h3 class="mt-2 font-medium text-amber-900">Espetinhos</h3>
-            </div>
-            <div class="text-center">
+    <main>
+
+        <!-- Category -->
+        <section id="menu" class="flex flex-col items-center justify-center my-8">
+            <h2 class="mt-4 mb-14 font-bold text-3xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu
+            </h2>
+            <div id="category"
+                class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                 <a href="#entradas">
-                    <img 
-                        src="assets/Entradas.jpg" 
-                        alt="Entradas" 
-                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
-                    >
+                    <div class="text-center">
+                        <img src="assets/Entradas.jpg" alt="Entradas"
+                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                        <h3 class="mt-2 font-medium text-amber-900">Entradas</h3>
+                    </div>
                 </a>
-                <h3 class="mt-2 font-medium text-amber-900">Entradas</h3>
-            </div>
-            <div class="text-center">
+                <a href="#espetinhos">
+                    <div class="text-center">
+                        <img src="assets/espeto_carne_de_sol.jpg" alt="Espetinhos"
+                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                        <h3 class="mt-2 font-medium text-amber-900">Espetinhos</h3>
+                    </div>
+                </a>
+
+
+                <a href="#porcoes">
+                    <div class="text-center">
+                        <img src="assets/porcoes.jfif" alt="Porcoes"
+                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                        <h3 class="mt-2 font-medium text-amber-900">Porcoes</h3>
+                    </div>
+                </a>
+
+
                 <a href="#bebidas">
-                    <img 
-                        src="assets/bebidas.jpg" 
-                        alt="Bebidas" 
-                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2"
-                    >
+                    <div class="text-center">
+                        <img src="assets/bebidas.jpg" alt="Bebidas"
+                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                        <h3 class="mt-2 font-medium text-amber-900">Bebidas</h3>
+                    </div>
                 </a>
-                <h3 class="mt-2 font-medium text-amber-900">Bebidas</h3>
+
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seções das categorias -->
-    <section id="espetinhos" class="my-8">
-        <h2 class="text-3xl font-bold text-amber-900">Espetinhos</h2>
-        <!-- Conteúdo da seção Espetinhos -->
-    </section>
+        <!-- Appetizers -->
+        <section id="entradas" class="my-8">
+            <h2 class="text-3xl font-bold text-amber-900 text-center mb-10">Entradas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+                <!-- Produto 01 -->
+                <div class="flex gap-2">
+                    <img src="assets/Entradas.jpg" alt="Pão de Alho Tradicional"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Pão de Alho</p>
+                        <p class="text-sm">Pão levinho de fermentação natural recheado de um cremoso recheio de alho.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Pão de Alho"
+                                data-price="6.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 02 -->
+                <div class="flex gap-2">
+                    <img src="assets/pão_charque.jpg" alt="Pão de Alho Tradicional"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Pão de Charque</p>
+                        <p class="text-sm">Pão levinho de fermentação natural recheado de um cremoso recheio de charque.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Pão de Charque"
+                                data-price="6.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="entradas" class="my-8">
-        <h2 class="text-3xl font-bold text-amber-900">Entradas</h2>
-        <!-- Conteúdo da seção Entradas -->
-    </section>
+        <!-- Skewers -->
+        <section id="espetinhos" class="my-8">
+            <h2 class="text-3xl font-bold text-amber-900 text-center mb-10">Espetinhos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+                <!-- Produto 01 -->
+                <div class="flex gap-2">
+                    <img src="assets/espeto_carne.jpg" alt="espeto de carne"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Carne</p>
+                        <p class="text-sm">Espetinho de carne suculenta, temperado perfeitamente, grelhado até a perfeição.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 7.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Carne"
+                                data-price="7.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 02 -->
+                <div class="flex gap-2">
+                    <img src="assets/espeto_frango.jpg" alt="Pão de Alho Tradicional"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Frango</p>
+                        <p class="text-sm">Delicioso espetinho de frango, marinado e grelhado até ficar suculento.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 7.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Frango"
+                                data-price="7.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-    <section id="bebidas" class="my-8">
-        <h2 class="text-3xl font-bold text-amber-900">Bebidas</h2>
-        <!-- Conteúdo da seção Bebidas -->
-    </section>
+                <!-- Produto 03 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_coracao.jpg" alt="Pão de Alho Tradicional"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Coração</p>
+                        <p class="text-sm">Espetinho de coração macio, temperado e grelhado com sabor irresistível.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 7.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Coração"
+                                data-price="7.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- produto 04 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_carne_de_sol.jpg" alt="espeto de carne de sol com queijo"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Carne de Sol com Queijo</p>
+                        <p class="text-sm">Espetinho de carne de sol com queijo, combinando a suculência da carne de sol com o sabor irresistível do queijo derretido. Uma delícia que vai conquistar seu paladar.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Carne de Sol com Queijo"
+                                data-price="10.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 05 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_salsichao.jpg" alt="Espetinho de salsichão"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de salsichão</p>
+                        <p class="text-sm">Espetinho de salsichão, grelhado à perfeição. Cada mordida traz o sabor intenso e suculento do salsichão, combinado com um toque especial de temperos. Perfeito para qualquer ocasião.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 4.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn"               data-name="Espetinho de salsichão"
+                                data-price="4.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 06 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_queijo.jpg" alt="Espetinho de Queijo"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Queijo</p>
+                        <p class="text-sm">espetinho de queijo, grelhado até derreter. Cada pedaço oferece uma textura cremosa e um sabor delicioso, perfeito para os amantes de queijo.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 6.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Queijo"
+                                data-price="6.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 07 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_frango_bacon.jpg" alt="Espetinho de Frango com Bacon"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Frango com Bacon</p>
+                        <p class="text-sm"> espetinho de frango envolto em bacon crocante. A combinação perfeita entre a suculência do frango e o sabor defumado do bacon, grelhado para a perfeição.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 9.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Frango com Bacon"
+                                data-price="9.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 08 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_carne_bacon.jpg" alt="Espetinho de Carne com Bacon"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Carne com Bacon</p>
+                        <p class="text-sm">Experimente nossa carne suculenta envolta em bacon crocante e saboroso. Uma combinação irresistível de texturas e sabores, grelhada para o máximo de prazer gastronômico.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 9.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Carne com Bacon"
+                                data-price="9.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 09 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_frango_queijo.jpg" alt="Espetinho de Franco com Queijo"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Frango com Queijo</p>
+                        <p class="text-sm">Delicie-se com nosso espetinho de frango com queijo, onde a suculência do frango se une ao sabor cremoso do queijo, grelhados com perfeição.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Frango com Queijo"
+                                data-price="10.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 10 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_charque.jpeg" alt="Espetinho de Charque"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Charque</p>
+                        <p class="text-sm">Experimente nosso espetinho de charque, preparado com carne suculenta e temperada, grelhado até alcançar o ponto perfeito de sabor e textura. Uma opção irresistível para os apreciadores de carne defumada.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Frango com Queijo"
+                                data-price="10.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 11 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_bode.jfif" alt="Espetinho de Bode"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Bode</p>
+                        <p class="text-sm">Espetinho de bode, preparado com carne suculenta e temperos regionais, grelhado para destacar o sabor autêntico da carne de bode. Uma escolha saborosa e única para quem aprecia uma experiência gastronômica tradicional.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Bode"
+                                data-price="10.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 12 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_bananinha.jpg" alt="Espetinho de bananinha"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Bananinha</p>
+                        <p class="text-sm">Desfrute do nosso espetinho de bananinha, um dos subcortes mais saborosos do boi, extraído de entre as ripas das costelas do dianteiro e traseiro. Rico em sabor e textura, grelhado para destacar todas as características da costela.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 10.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Bananinha"
+                                data-price="10.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 13 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_picanha.jpg" alt="Espetinho de Picanha"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Picanha</p>
+                        <p class="text-sm">Espetinho de picanha, famosa por sua suculência e sabor incomparável. Preparada com cuidado e grelhada para preservar sua maciez e suculência, é uma escolha irresistível para os amantes de carne.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 12.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Picanha"
+                                data-price="12.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 14 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_tulipa_frango.jpg" alt="Espetinho de Tulipa"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Tulipa</p>
+                        <p class="text-sm">Experimente nosso espetinho de tulipa de frango, feito com coxinha da asa suculenta e temperada, grelhada para um sabor irresistível. Uma opção deliciosa para qualquer ocasião.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 8.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Tulipa"
+                                data-price="8.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 15 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_linguica_carneiro.jfif" alt="Espetinho de Linguiça de Carneiro"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Linguiça de Carneiro</p>
+                        <p class="text-sm">Desfrute do nosso espetinho de linguiça de carneiro, com sabor robusto e temperos tradicionais, grelhado para realçar sua suculência e aroma característico. Uma escolha única e saborosa para os apreciadores de carneiro.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 5.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Linguiça de Carneiro"
+                                data-price="5.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 16 -->
+
+                <div class="flex gap-2">
+                    <img src="assets/espeto_linguica_bode.png" alt="Espetinho de Linguiça de Bode"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
+                    <div>
+                        <p class="font-bold">Espetinho de Linguiça de Bode</p>
+                        <p class="text-sm">Espetinho de linguiça de bode, com carne suculenta e temperos típicos, grelhado para ressaltar o sabor robusto e autêntico do bode. Uma opção irresistível para quem aprecia sabores regionais.
+                        </p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 5.00</p>
+                            <button class="bg-amber-900 px-5 rounded add-to-cart-btn" data-name="Espetinho de Linguiça de Bode"
+                                data-price="5.00">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- Drinks -->
+        <section id="porcoes" class="my-8">
+            <h2 class="text-3xl font-bold text-amber-900 text-center">Porções</h2>
+        </section>
+
+        <section id="bebidas" class="my-8">
+            <h2 class="text-3xl font-bold text-amber-900 text-center">Bebidas</h2>
+        </section>
+    </main>
 
 </body>
+
 </html>
