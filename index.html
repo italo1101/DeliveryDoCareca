@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,66 +24,70 @@
             <h1 class="text-4xl mt-4 mb-2 font-bold text-white sm: text-center">Espetinho do Careca</h1>
             <p class="font-medium text-white sm: text-center">Rua profª Lourdes Dutra</p>
             <span class="font-medium text-white">O Melhor Espetinho de Rua da Zona Norte.</span>
-            <div class="mt-4 mb-2" id="date-span">
-                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg ">Presencial - Qui à Sab - 19:00</span>
+            <div class="mt-4 mb-2">
+                <span id="restaurant-span" class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg ">Presencial - Qui à Sab - 19:00</span>
             </div>
             <div class="mt-4 mb-2">
-                <span class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Delivery - Seg à Qua - 19:00 às
+                <span id="delivery-span" class="bg-green-600 text-white font-medium px-4 py-1 rounded-lg">Delivery - Seg à Qua - 19:00 às
                     00:00</span>
             </div>
         </div>
     </header>
 
-    <main>
+    <!-- Category -->
 
-        <!-- Category -->
-        <section id="menu" class="flex flex-col items-center justify-center my-8">
-            <h2 class="mt-4 mb-14 font-bold text-3xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu
-            </h2>
-            <div id="category"
-                class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-                <a href="#entradas">
-                    <div class="text-center">
-                        <img src="assets/entradas_pao_alho.jpg" alt="Entradas"
-                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
-                        <h3 class="mt-2 font-medium text-amber-900">Entradas</h3>
-                    </div>
-                </a>
-                <a href="#espetinhos">
-                    <div class="text-center">
-                        <img src="assets/espeto_carne.jpg" alt="Espetinhos"
-                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
-                        <h3 class="mt-2 font-medium text-amber-900">Espetinhos</h3>
-                    </div>
-                </a>
-
-
-                <a href="#porcoes">
-                    <div class="text-center">
-                        <img src="assets/porcoes.jfif" alt="Porcoes"
-                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
-                        <h3 class="mt-2 font-medium text-amber-900">Porções</h3>
-                    </div>
-                </a>
+    <section id="category" class="flex flex-col items-center justify-center my-8">
+        <h2 class="mt-4 mb-14 font-bold text-3xl text-amber-900 border-b-2 border-b-amber-900">Conheça nosso Menu
+        </h2>
+        <div id="category"
+            class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <a href="#entradas">
+                <div class="text-center">
+                    <img src="assets/entradas_pao_alho.jpg" alt="Entradas"
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                    <h3 class="mt-2 font-medium text-amber-900">Entradas</h3>
+                </div>
+            </a>
+            <a href="#espetinhos">
+                <div class="text-center">
+                    <img src="assets/espeto_carne.jpg" alt="Espetinhos"
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                    <h3 class="mt-2 font-medium text-amber-900">Espetinhos</h3>
+                </div>
+            </a>
 
 
-                <a href="#bebidas">
-                    <div class="text-center">
-                        <img src="assets/bebidas.jpg" alt="Bebidas"
-                            class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
-                        <h3 class="mt-2 font-medium text-amber-900">Bebidas</h3>
-                    </div>
-                </a>
+            <a href="#porcoes">
+                <div class="text-center">
+                    <img src="assets/porcoes.jfif" alt="Porcoes"
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                    <h3 class="mt-2 font-medium text-amber-900">Porções</h3>
+                </div>
+            </a>
 
 
-            </div>
-        </section>
+            <a href="#bebidas">
+                <div class="text-center">
+                    <img src="assets/bebidas.jpg" alt="Bebidas"
+                        class="w-32 h-32 rounded-full object-cover mx-auto transition-transform duration-200 hover:transform hover:-translate-y-2">
+                    <h3 class="mt-2 font-medium text-amber-900">Bebidas</h3>
+                </div>
+            </a>
+
+
+        </div>
+    </section>
+
+    <main id="menu">
 
         <!-- Appetizers -->
+
         <section id="entradas" class="my-8">
             <h2 class="text-3xl font-bold text-amber-900 text-center mb-10">Entradas</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
                 <!-- Produto 01 -->
+
                 <div class="flex gap-2">
                     <div class="w-28 h-28 flex-shrink-0">
                         <img src="assets/entradas_pao_alho.jpg" alt="Pão de Alho Tradicional"
@@ -101,7 +106,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Produto 02 -->
+
                 <div class="flex gap-2">
                     <div class="w-28 h-28 flex-shrink-0">
                         <img src="assets/entradas_pao_charque.jpg" alt="Pão de Charque"
@@ -124,10 +131,13 @@
         </section>
 
         <!-- Skewers -->
+
         <section id="espetinhos" class="my-8">
             <h2 class="text-3xl font-bold text-amber-900 text-center mb-10">Espetinhos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
                 <!-- Produto 01 -->
+
                 <div class="flex gap-2">
                     <img src="assets/espeto_carne.jpg" alt="espeto de carne"
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
@@ -144,7 +154,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Produto 02 -->
+
                 <div class="flex gap-2">
                     <img src="assets/espeto_frango.jpg" alt="Pão de Alho Tradicional"
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
@@ -188,7 +200,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Carne de Sol com Queijo</p>
-                        <p class="text-sm">Espetinho de carne de sol com queijo, combinando a suculência da carne de sol com o sabor irresistível do queijo derretido. Uma delícia que vai conquistar seu paladar.
+                        <p class="text-sm">Espetinho de carne de sol com queijo, combinando a suculência da carne de sol com o sabor irresistível do queijo derretido.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 10.00</p>
@@ -207,7 +219,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de salsichão</p>
-                        <p class="text-sm">Espetinho de salsichão, grelhado à perfeição. Cada mordida traz o sabor intenso e suculento do salsichão, combinado com um toque especial de temperos. Perfeito para qualquer ocasião.
+                        <p class="text-sm">Espetinho de salsichão, grelhado à perfeição. Cada mordida traz o sabor intenso e suculento do salsichão, perfeito para qualquer ocasião.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 4.00</p>
@@ -264,7 +276,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Carne com Bacon</p>
-                        <p class="text-sm">Experimente nossa carne suculenta envolta em bacon crocante e saboroso. Uma combinação irresistível de texturas e sabores, grelhada para o máximo de prazer gastronômico.
+                        <p class="text-sm">Experimente nossa carne suculenta envolta em bacon crocante e saboroso. Uma combinação irresistível de texturas e sabores.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 9.00</p>
@@ -302,7 +314,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Charque</p>
-                        <p class="text-sm">Experimente nosso espetinho de charque, preparado com carne suculenta e temperada, grelhado até alcançar o ponto perfeito de sabor e textura. Uma opção irresistível para os apreciadores de carne defumada.
+                        <p class="text-sm">Experimente nosso espetinho de charque, preparado com carne suculenta e temperada, grelhado até alcançar o ponto perfeito de sabor e textura.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 10.00</p>
@@ -321,7 +333,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Bode</p>
-                        <p class="text-sm">Espetinho de bode, preparado com carne suculenta e temperos regionais, grelhado para destacar o sabor autêntico da carne de bode. Uma escolha saborosa e única para quem aprecia uma experiência gastronômica tradicional.
+                        <p class="text-sm">Espetinho de bode, preparado com carne suculenta e temperos regionais, grelhado para destacar o sabor autêntico da carne de bode.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 10.00</p>
@@ -340,7 +352,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Bananinha</p>
-                        <p class="text-sm">Desfrute do nosso espetinho de bananinha, um dos subcortes mais saborosos do boi, extraído de entre as ripas das costelas do dianteiro e traseiro. Rico em sabor e textura, grelhado para destacar todas as características da costela.
+                        <p class="text-sm">Desfrute do nosso espetinho de bananinha, um dos subcortes mais saborosos do boi. Rico em sabor, textura e grelhado para destacar todo o sabor.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 10.00</p>
@@ -359,7 +371,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Picanha</p>
-                        <p class="text-sm">Espetinho de picanha, famosa por sua suculência e sabor incomparável. Preparada com cuidado e grelhada para preservar sua maciez e suculência, é uma escolha irresistível para os amantes de carne.
+                        <p class="text-sm">Espetinho de picanha, famosa por sua suculência e sabor incomparável. Preparada com cuidado e grelhada para preservar sua maciez e suculência.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 12.00</p>
@@ -378,7 +390,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Tulipa</p>
-                        <p class="text-sm">Experimente nosso espetinho de tulipa de frango, feito com coxinha da asa suculenta e temperada, grelhada para um sabor irresistível. Uma opção deliciosa para qualquer ocasião.
+                        <p class="text-sm">Experimente nosso espetinho de tulipa de frango, feito com coxinha da asa suculenta e temperada, grelhada para um sabor irresistível.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 8.00</p>
@@ -397,7 +409,7 @@
                         class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-6 duration-300">
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Linguiça de Carneiro</p>
-                        <p class="text-sm">Desfrute do nosso espetinho de linguiça de carneiro, com sabor robusto e temperos tradicionais, grelhado para realçar sua suculência e aroma característico. Uma escolha única e saborosa para os apreciadores de carneiro.
+                        <p class="text-sm">Desfrute do nosso espetinho de linguiça de carneiro, com sabor robusto e temperos tradicionais para realçar o aroma característico.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 5.00</p>
@@ -418,7 +430,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-amber-900">Espetinho de Linguiça de Bode</p>
-                        <p class="text-sm">Espetinho de linguiça de bode, com carne suculenta e temperos típicos, grelhado para ressaltar o sabor robusto e autêntico do bode. Uma opção irresistível para quem aprecia sabores regionais.
+                        <p class="text-sm">Espetinho de linguiça de bode, com carne suculenta e temperos típicos, grelhado para ressaltar o sabor robusto e autêntico do bode.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 5.00</p>
@@ -435,6 +447,8 @@
             </div>
         </section>
 
+        <!-- Portions -->
+
         <section id="porcoes" class="my-8">
             <h2 class="text-3xl font-bold text-amber-900 text-center mb-10">Porções</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
@@ -448,8 +462,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-amber-900">Carne de Sol com Fritas</p>
-                        <p class="text-sm">Carne de sol suculenta e saborosa, grelhada na perfeição, acompanhada por batatas fritas crocantes. Um prato clássico que combina tradição e sabor em cada mordida.
-                        </p>
+                        <p class="text-sm">Carne de sol suculenta e saborosa, grelhada na perfeição, acompanhada por batatas fritas crocantes.
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 25.00</p>
                             <button class="bg-amber-900 px-5 rounded add-to-cart-btn"
@@ -737,7 +750,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-amber-900">Heineken LongNeck</p>
-                        <p class="text-sm"> Heineken LongNeck com um sabor equilibrado e refrescante, resultado da combinação perfeita de cevada, lúpulo e água, transformada pela exclusiva levedura em uma cerveja premium que todos conhecemos e amamos.
+                        <p class="text-sm"> Heineken LongNeck com um sabor equilibrado e refrescante, resultado da combinação perfeita de cevada, lúpulo e água.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 8.00</p>
@@ -891,7 +904,7 @@
                     </div>
                     <div>
                         <p class="font-bold text-amber-900">Chop de Vinho 300ml</p>
-                        <p class="text-sm"> Uma combinação única de vinho e chope, proporcionando um sabor refrescante e levemente adocicado. Ideal para quem busca uma bebida diferente e sofisticada.
+                        <p class="text-sm"> Uma combinação única de vinho e chope, proporcionando um sabor refrescante e levemente adocicado.
                         </p>
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <p class="font-bold text-lg text-amber-900">R$ 6.00</p>
@@ -908,50 +921,55 @@
         </section>
     </main>
 
-    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+            
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+    
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            
+            <div>
+                <p class="font-bold mt-2">Nome Completo </p>
+                <input type="text" placeholder="Digite o seu nome" id="name" class="w-full border-2 p-1 rounded my-1"/>
+            </div>
 
-            <div id="cart-items" class="flex justify-between mb-2 flex-col">
-                <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
-
-                <p class="font-bold mt-4">Endereço de Entrega: </p>
-                <input
-                    type="text"
-                    placeholder="Digite seu endereço completo"
-                    id="address"
-                    class="w-full border-2 p-1 rounded my-1"
-                >
-
-                <p class="font-bold mt-4">Método de Pagamento</p>
-                <input
-                    type="text"
-                    placeholder="Digite o seu método de pagamento"
-                    id="payment"
-                    class="w-full border-2 p-1 rounded my-1"
-                >
-
-                <p class="text-red-600 hidden" id="warning">*Todos os campos são obrigatórios</p>
-
-                <div class="flex items-center justify-between mt-4 w-full">
-                    <button id="close-btn" class="">Fechar</button>
-                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-                </div>
+            <div>
+                <p class="font-bold mt-2">Endereço de Entrega: </p>
+                <input type="text" placeholder="Digite o endereço completo" id="address" class="w-full border-2 p-1 rounded my-1"/>
+            </div>
+            
+            <form id="type_payment">
+                <fieldset class="mt-2">
+                    <legend class="font-bold mb-4">Método de Pagamento:</legend>
+                    <input type="radio" id="pix" name="payment" value="pix">
+                    <label for="boleto">Pix</label><br>
+                    <input type="radio" id="credito" name="payment" value="credito">
+                    <label for="credito">Cartão de Crédito</label><br>
+                    <input type="radio" id="debito" name="payment" value="debito">
+                    <label for="debito">Cartão de Débito</label><br>
+                    <input type="radio" id="dinheiro" name="payment" value="dinheiro">
+                    <label for="dinheiro">Dinheiro</label><br>
+                </fieldset>
+            </form>
+    
+            <p class="text-red-600 hidden" id="warning">*Todos os campos são obrigatórios</p>
+    
+            <div class="flex items-center justify-between mt-4 w-full">
+                <button id="close-btn" class="hover:bg-red-600 px-4 py-1 rounded hover:text-white">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
             </div>
         </div>
     </div>
-
+    
     <footer class="w-full bg-amber-900 py-3 fixed bottom-0 z-1 flex items-center justify-center">
-        <button
-            class="flex items-center gap-2 text-white font-bold"
-            id="cart-btn"
-         >
-            (<span id="cart-count">0</span>)
-            Carrinho
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>) Carrinho
             <i class="fa fa-cart-plus text-lg text-white"></i>
         </button>
     </footer>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
