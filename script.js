@@ -194,7 +194,7 @@ Total: ${total}
 Forma de pagamento: ${paymentTypeSelected.value}
 `
     );
-    const phone = "+558188538470";
+    const phone = "+558186386663";
 
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
