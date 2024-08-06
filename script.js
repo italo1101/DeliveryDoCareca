@@ -48,6 +48,18 @@ function addToCart(name, price) {
     } else {
         cart.push({ name, price, quantity: 1 });
     }
+
+    Toastify({
+        text: "Item Adicionado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#008000",
+        },
+      }).showToast();
     updateCartModal();
 }
 
@@ -106,6 +118,18 @@ function removeItem(name) {
         } else {
             cart.splice(index, 1);
         }
+
+        Toastify({
+            text: "Item Removido",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "#ef4444",
+            },
+          }).showToast();
         updateCartModal();
     }
 }
@@ -224,7 +248,7 @@ function isDeliveryOpen() {
     const data = new Date();
     const day = data.getDay(); // 0 (Sunday) to 6 (Saturday)
     const hour = data.getHours();
-    return (day >= 1 && day <= 3) && (hour >= 10 && hour < 23); // Monday (1) to Wednesday (3)
+    return (day >= 1 && day <= 3) && (hour >= 19 && hour < 23); // Monday (1) to Wednesday (3)
 }
 
 const deliverySpan = document.getElementById("delivery-span");
