@@ -925,7 +925,8 @@
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
             
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <div id="cart-items" class="flex justify-between mb-2 flex-col max-h-60 overflow-y-auto"></div>
+            <!-- max-h-60 define a altura máxima da div e overflow-y-auto adiciona o scroll quando necessário -->
     
             <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
             
@@ -933,7 +934,7 @@
                 <p class="font-bold mt-2">Nome Completo </p>
                 <input type="text" placeholder="Digite o seu nome" id="name" class="w-full border-2 p-1 rounded my-1"/>
             </div>
-
+    
             <div>
                 <p class="font-bold mt-2">Endereço de Entrega: </p>
                 <input type="text" placeholder="Digite o endereço completo" id="address" class="w-full border-2 p-1 rounded my-1"/>
@@ -961,6 +962,7 @@
             </div>
         </div>
     </div>
+    
     
     <footer class="w-full bg-amber-900 py-3 fixed bottom-0 z-1 flex items-center justify-center">
         <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
